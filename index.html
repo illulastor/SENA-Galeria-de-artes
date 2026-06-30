@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería de Arte - Exposición Principal</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="menu-navegacion">
+      <a href="#" class="enlace-menu">Inicio</a>
+      <a href="#" class="enlace-menu">Galería</a>
+      <a href="#" class="enlace-menu">Quiénes Somos</a>
+      <a href="#" class="enlace-menu">Contactos</a>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    <h1 class="titulo-galeria">Exposición Contemporánea</h1>
+    <p class="subtitulo">Explorando el realismo y la irreverencia.</p>
+
+    <section id="obra-principal">
+      <div class="marco-cuadro">
+        <img src="img/principal.jpg" alt="Retrato de Gabriel García Márquez" class="imagen-cuadro" />
+      </div>
+      <div class="info-cuadro">
+        <h2>"La irreverencia del genio"</h2>
+        <p class="autor">Homenaje a Gabriel García Márquez</p>
+        <p class="descripcion">
+          Una pieza impactante que combina el retrato al óleo con texturas
+          mixtas, capturando un gesto audaz, humano y alejado de la solemnidad
+          tradicional del Nobel colombiano.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- INSERT_YOUR_CODE -->
+  <section class="galeria-gabo">
+    <h2 class="titulo-galeria-secundaria">
+      <center>Obras destacadas de Gabriel García Márquez</center>
+    </h2>
+    <div class="contenedor-cards">
+      <!-- Card 1 -->
+      <div class="card-obra">
+        <div class="marco-cuadro">
+          <img src="img/images.jpg" alt="Cien años de soledad" class="imagen-cuadro" />
+        </div>
+        <div class="info-cuadro">
+          <h3>"Cien años de soledad"</h3>
+          <p class="autor">1967</p>
+          <p class="descripcion">
+            La novela más emblemática del realismo mágico. Narra la historia
+            de la familia Buendía a lo largo de generaciones en el mítico
+            Macondo.
+          </p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card-obra">
+        <div class="marco-cuadro">
+          <img src="img/images.jpg" alt="El amor en los tiempos del cólera" class="imagen-cuadro" />
+        </div>
+        <div class="info-cuadro">
+          <h3>"El amor en los tiempos del cólera"</h3>
+          <p class="autor">1985</p>
+          <p class="descripcion">
+            Una historia de amor perseverante, ambientada en el Caribe
+            colombiano, que explora la espera, el paso del tiempo y la pasión.
+          </p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card-obra">
+        <div class="marco-cuadro">
+          <img src="img/images.jpg" alt="Crónica de una muerte anunciada" class="imagen-cuadro" />
+        </div>
+        <div class="info-cuadro">
+          <h3>"Crónica de una muerte anunciada"</h3>
+          <p class="autor">1981</p>
+          <p class="descripcion">
+            Crónica periodística y novela a la vez, retrata la reconstrucción
+            de un crimen anunciado por todo un pueblo.
+          </p>
+        </div>
+      </div>
+    </div>
+  <iframe width="560" height="315"
+  class="vid"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  allowfullscreen>
+</iframe>
+  </section>
+  <!-- INSERT_YOUR_CODE -->
+  <div class="botones-acciones" style="display: flex; gap: 1rem; margin: 2rem 0">
+    <!-- Botón Enviar -->
+    <aoutube.com /watch?v=-mh6HZw0Zl0 href="https://www.fundaciongabo.org/es" target="_blank"
+      style="text-decoration: none">
+      <button type="button" style="padding: 0.8rem 1.5rem; font-size: 1rem; cursor: pointer">
+        Enviar
+      </button>
+      </a>
+      <!-- Botón Guardar -->
+      <button type="button" style="padding: 0.8rem 1.5rem; font-size: 1rem; cursor: pointer" onclick="mostrarModal()">
+        Guardar
+      </button>
+      <!-- Botón Extra (personalizable si se solicita) -->
+      <button type="button" style="padding: 0.8rem 1.5rem; font-size: 1rem; cursor: pointer"
+        onclick="alert('Acción del tercer botón aquí.')">
+        Otro botón
+      </button>
+  </div>
+
+  <!-- Modal de confirmación -->
+  <div id="modal-confirmacion" style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      " onclick="cerrarModal(event)">
+    <div style="
+          background: #fff;
+          padding: 2rem 2.5rem;
+          border-radius: 10px;
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.19);
+          text-align: center;
+        " onclick="event.stopPropagation()">
+      <p style="font-size: 1.2rem; margin-bottom: 1.5rem">
+        Su imagen ha sido guardada
+      </p>
+      <button type="button" onclick="cerrarModal(event)"
+        style="padding: 0.6rem 1.2rem; font-size: 1rem; cursor: pointer">
+        Cerrar
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function mostrarModal() {
+      document.getElementById("modal-confirmacion").style.display = "flex";
+    }
+    function cerrarModal(e) {
+      document.getElementById("modal-confirmacion").style.display = "none";
+    }
+  </script>
+
+  <footer>
+    <p class="texto-footer">
+      &copy; 2026 Galería de Arte Digital - Práctica de CSS
+    </p>
+  </footer>
+</body>
+
+</html>
